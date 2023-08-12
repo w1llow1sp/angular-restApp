@@ -20,6 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { UserDetailComponent } from './components/user/user-detail.component';
+{
+  /*Form validation*/
+}
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
   dataEncapsulation: false,
@@ -40,7 +44,10 @@ HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
+      delay: 1500,
     }),
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
