@@ -1,7 +1,7 @@
 <div class="container" style="margin-top: 40px">
   <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
     <h5 *ngIf="success">Your Form Valid!</h5>
-    {{//**//}}
+
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" formControlName="name" class="form-control" />
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    {{//**//}}
+
     <div class="form-group">
       <label for="message">Message:</label>
       <textarea formControlName="message" class="form-control"></textarea>
@@ -27,10 +27,9 @@
         </div>
       </div>
     </div>
-    {{//**//}}
+
     <button type="submit" class="btn btn-primary">Send message</button>
   </form>
-  {{//*forms end*//}}
 
   <div *ngIf="submitted" class="results">
     <p>
