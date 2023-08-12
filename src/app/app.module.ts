@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 }
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
+import { UserDetailComponent } from './components/user/user-detail.component';
 
 HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
   dataEncapsulation: false,
@@ -31,6 +32,7 @@ HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
     AboutComponent,
     ContactComponent,
     HomeComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ReqresService } from '../../services/reqres.service';
+import { Router } from '@angular/router';
 import { User } from '../../user';
 
 @Component({
@@ -9,7 +10,7 @@ import { User } from '../../user';
 })
 export class HomeComponent {
   users: User[] = [];
-  constructor(private reqresService: ReqresService) {
+  constructor(private reqresService: ReqresService, private router: Router) {
     this.getUsers();
   }
 
@@ -25,6 +26,6 @@ export class HomeComponent {
   }
 
   userDetails(id: number) {
-    console.log('User id: ', id);
+    this.router.navigate( ['user', id] )
   }
 }
