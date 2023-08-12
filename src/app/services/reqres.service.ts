@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { User } from '../user';
@@ -16,6 +16,9 @@ export class ReqresService {
       return of(result as T);
     };
   }
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
@@ -28,5 +31,10 @@ export class ReqresService {
     return this.http
       .get<User>(url)
       .pipe(catchError(this.handleError<User>(`getUser id=${id}`)));
+  }
+  updateUser(user: User): any {
+    return this.http
+      .put(this.url, user, this.httpOptions)
+      .pipe(catchError(this.handleError<User>('updateUser')));
   }
 }
