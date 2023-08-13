@@ -2,6 +2,7 @@
   <div class="btn-group">
     <button class="btn btn-success" (click)="addUser()">Add
       User</button>
+
   </div>
 </div>
 <ul>
@@ -13,6 +14,8 @@
               (click)="userDetails(user.id)">
         Details
       </button>
+      <button class="btn btn-danger btn-sm" title="Delete user"
+              (click)="deleteUser(user)">X</button>
     </div>
   </li>
 </ul>
