@@ -29,10 +29,8 @@ import { UserDetailComponent } from './components/user/user-detail.component';
   }
 }
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {UserAddComponent} from './components/user/user-add.component';
 
-HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-  dataEncapsulation: false,
-});
 
 @NgModule({
   declarations: [
@@ -42,6 +40,7 @@ HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
     ContactComponent,
     HomeComponent,
     UserDetailComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule,
