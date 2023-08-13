@@ -31,6 +31,7 @@ import { UserDetailComponent } from './components/user/user-detail.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {UserAddComponent} from './components/user/user-add.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     HomeComponent,
     UserDetailComponent,
     UserAddComponent,
-    LoadingComponent
+    LoadingComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
