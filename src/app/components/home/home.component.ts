@@ -10,14 +10,19 @@ import { User } from '../../user';
 })
 export class HomeComponent {
   users: User[] = [];
+  loading:boolean = false
+
+
   constructor(private reqresService: ReqresService, private router: Router) {
     this.getUsers();
   }
 
   getUsers() {
+    this.loading = true;
     this.reqresService.getUsers().subscribe(
       (res: User[]) => {
         this.users = res;
+        this.loading = false;
       },
       (err) => {
         console.error(err);

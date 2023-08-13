@@ -30,6 +30,7 @@ import { UserDetailComponent } from './components/user/user-detail.component';
 }
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {UserAddComponent} from './components/user/user-add.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {UserAddComponent} from './components/user/user-add.component';
     ContactComponent,
     HomeComponent,
     UserDetailComponent,
-    UserAddComponent
+    UserAddComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
